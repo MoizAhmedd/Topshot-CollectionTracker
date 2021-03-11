@@ -2,18 +2,23 @@
 {
 	"name": "Topshot Tracker",
 	"version": "1.0.1",
-	"description": "An extension that shows you the lowest ask of each of your moments, as well as your total collections worth",
+	"description": "An extension that shows you the lowest ask of each of your moments, as well as your total collections value",
+	"icons": {
+		"16": "16.png",
+		"32": "32.png",
+		"48": "48.png",
+		"128": "128.png"
+	},
   "manifest_version": 2,
 	"permissions": [
-        "*://*/*",
-		"tabs",
-		"storage"
+		"http://*.nbatopshot.com/*",
+		"https://*.nbatopshot.com/*"
 	],
 	"content_scripts": [
 	  {
 		"matches": [
-			"http://*/*",
-			"https://*/*"
+			"http://*.nbatopshot.com/*",
+			"https://*.nbatopshot.com/*"
 		],
 		"js": [
 		  "content.js"
@@ -26,6 +31,7 @@
 	]
 	},
 	"browser_action": {
-	"default_title": "Continue Watching for YouTube"
+		"default_title": "Topshot Tracker"
 	}
   }
+  

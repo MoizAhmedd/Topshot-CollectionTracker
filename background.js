@@ -1,4 +1,16 @@
-url = 'https://www.nbatopshot.com/moment/76ec8d54-a1c6-4116-b16e-dd870cb8f621';
+
+chrome.tabs.onUpdated.addListener(
+	function(tabId, changeInfo, tab) {
+	  // read changeInfo data and do something with it
+	  // like send the new url to contentscripts.js
+	  if (changeInfo.url && changeInfo.url.includes('user')) {
+			chrome.tabs.sendMessage( tabId, {
+				message: 'startObserving',
+				url: changeInfo.url
+			})
+	  }
+	}
+  );
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 	findListing(request.options.link,request.options.idx,sendResponse);
