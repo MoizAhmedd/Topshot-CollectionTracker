@@ -2,7 +2,7 @@
 A chrome extension that shows you the lowest asks of all your moments, as well as the total value of your collection, without having to manually go on the listings or calculate the totals.
 
 ## Download
-Currently pending review on the webstore
+https://chrome.google.com/webstore/detail/topshot-tracker/ighmbomagjleefmocempojajlbadnkgp
 
 ## Development Usage
 - `git clone https://github.com/MoizAhmedd/Topshot-CollectionTracker.git` to your local machine
